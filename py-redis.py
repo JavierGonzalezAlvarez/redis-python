@@ -15,7 +15,7 @@ def strings_redis():
     redis.set("name","jaime")  
     print("key: ", redis.get("nombre"))  
     print("-------------")
-    print("keys: ", redis.keys())  
+    print("all keys: ", redis.keys())  
     print("-------------")
 
     #setnx()
@@ -25,6 +25,10 @@ def strings_redis():
     redis.mset({"name": "peter", "name": "david"})    
     print("name: ", redis.mget("name"))         
     print("-------------")
+
+    #delete all keys     
+    for key in redis.scan_iter("prefix:*"):
+        redis.delete(key)
 
    
 def hashes_redis():
@@ -48,6 +52,10 @@ def hashes_redis():
     #print("email.2:" , redis.hget("user.2", "email"))  
     print("-------------")
 
+    #delete all keys     
+    for key in redis.scan_iter("prefix:*"):
+        redis.delete(key)
+
 
 def list_redis():
     import redis
@@ -60,6 +68,9 @@ def list_redis():
     redis.lpush("names","pedro" " ana" " mara")
     print("names: ", redis.lrange("names", 0, 2))   
 
+    #delete all keys     
+    for key in redis.scan_iter("prefix:*"):
+        redis.delete(key)
 
 
 def sets_redis():
@@ -68,6 +79,10 @@ def sets_redis():
     print("-------------")
     print("SETS")
     print("-------------")
+
+    #delete all keys     
+    for key in redis.scan_iter("prefix:*"):
+        redis.delete(key)
 
 
 
@@ -78,7 +93,9 @@ def sorted_sets_redis():
     print("SORTED_SETS")
     print("-------------")
 
-
+    #delete all keys     
+    for key in redis.scan_iter("prefix:*"):
+        redis.delete(key)
 
 
 

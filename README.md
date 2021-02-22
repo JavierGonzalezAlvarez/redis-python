@@ -27,6 +27,10 @@ $ redis-cli --version
     $ redis-cli -p 6380
 - some info
     $ redis-cli info
+- db
+    $ config get dbfilename
+- configuration
+    sudo nano /etc/redis/redis.conf
 
 # comands in redis-cli
 > config get dir  => give back 2 rows, parameter name and value of the parameter
@@ -42,6 +46,14 @@ ie: config set loglevel verbose => set verbose
 >
 >
 >
+
+
+# hashes
+
+
+# list
+
+
 
 
 ## python and redis
@@ -79,7 +91,7 @@ Traceback (most recent call last):
 AttributeError: module 'redis' has no attribute 'Redis'
 solution: not name redis.py another file
 
-# start redis
+# start redis to work with python
 $ redis-server
 
 # connection to 127.0.0.1 6379
@@ -88,10 +100,6 @@ $ redis-cli
 # exit from redis
 $ exit
 
-# hashes
-
-
-# list
 
 
 
