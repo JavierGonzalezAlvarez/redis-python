@@ -27,7 +27,7 @@ $ redis-cli --version
     $ redis-cli -p 6380
 - some info
     $ redis-cli info
-- db
+- name of the db
     $ config get dbfilename
 - configuration
     sudo nano /etc/redis/redis.conf
@@ -40,21 +40,6 @@ $ redis-cli --version
 > config set {name parameter} {value parameter} => in run-time
 > config set loglevel => values in parameter loglevel
 ie: config set loglevel verbose => set verbose
->
->
->
->
->
->
-
-
-# hashes
-
-
-# list
-
-
-
 
 ## python and redis
 
@@ -82,7 +67,7 @@ virtualenv ev -p python3
 virtualenv ev -p python
 source ev/bin/activate
 
-# desactivar el entrono virtual
+# desactivar entorno virtual
 deativate
 
 # if error:
