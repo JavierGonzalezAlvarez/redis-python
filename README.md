@@ -1,6 +1,6 @@
 ##  redis
 
-# installation
+# installation of redis
 $ sudo add-apt-repository ppa:redislabs/redis
 $ sudo apt-get update
 $ sudo apt-get install redis
@@ -57,17 +57,17 @@ $ pip install hiredis
 # redis python  documentation
 https://redis-py.readthedocs.io/en/stable/genindex.html
 
-# install entorno virtual
+# install virtual environment
 sudo apt install python3-virtualenv
 
-# Crear el proyecto en django y en un entorno virtual para python3
+# create project python3
 virtualenv ev -p python3
 
-# Crear el proyecto en django y en un entorno virtual para python2
+# create project python2
 virtualenv ev -p python
 source ev/bin/activate
 
-# desactivar entorno virtual
+# desactivate virtual environment
 deativate
 
 # if error:
@@ -76,7 +76,7 @@ Traceback (most recent call last):
 AttributeError: module 'redis' has no attribute 'Redis'
 solution: not name redis.py another file
 
-# start redis to work with python
+# start redis so as to work with python
 $ redis-server
 
 # connection to 127.0.0.1 6379

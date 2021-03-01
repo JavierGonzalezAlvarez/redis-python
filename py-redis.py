@@ -124,7 +124,7 @@ def main():
     import os
     try:     
         #run redis before python   
-        os.system('redis-server')        
+        #os.system('redis-server')        
         strings_redis()
         hashes_redis()
         list_redis()
